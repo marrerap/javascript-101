@@ -14,10 +14,14 @@ fetch('https://dog.ceo/api/breeds/list')
                const container2 = document.getElementById('container2')
                const image = document.createElement('img')
                image.setAttribute('src', data.message)
+               image.setAttribute('id', "images")
                container2.appendChild(image)
             })
-            .then(function() {
-               image.setAttribute("")
-            })
+          
+         
+       })
+       select.addEventListener('change', function() {
+          const remove = document.getElementById('images')
+          remove.remove();
        }) 
     })
