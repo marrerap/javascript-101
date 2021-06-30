@@ -1,0 +1,11 @@
+.completed {
+    text-decoration: line-through;
+    color: rgb(36, 36, 6);
+    text-decoration-style:double;
+    font-style: italic;
+    margin-left: 20px;
+}
+li {
+    color: green;
+    font-size: larger;
+}
