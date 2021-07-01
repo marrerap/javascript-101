@@ -1,13 +1,15 @@
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(function(response) { return response.json(); })
     .then(function(data) {
-       
+       console.log(data)
        const select = document.getElementById('select')              
           for (let count = 0; count < data.length; count++) {
             const option = document.createElement('option')
             option.textContent = data[count].name
             option.setAttribute('value', data[count].id)
-            select.appendChild(option)            
+            select.appendChild(option)
+             
+                       
        }
        select.addEventListener('change', function(event) {
          fetch(`https://jsonplaceholder.typicode.com/users/${event.target.value}`)
